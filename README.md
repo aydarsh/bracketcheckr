@@ -12,7 +12,6 @@ The API documentation can be accessed at `http://localhost:8080/swagger-ui.html`
 
 ## Functionality
 - Brackets correctness checking
-- Empty brackets are considered incorrect
 
 ## GitHub Actions CI Pipeline
 The repository has a GitHub Actions CI pipeline configured to build a Docker image and push it to Docker Hub. In order to build a Docker image with a SemVer or `latest` tag, the repository must be tagged and the tag must be pushed.

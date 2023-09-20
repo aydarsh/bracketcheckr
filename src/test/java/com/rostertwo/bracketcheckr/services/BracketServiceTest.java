@@ -15,26 +15,26 @@ class BracketServiceTest {
     private BracketService bracketService;
 
     @Test
-    public void emptyBrackets() {
-        String text = "(Hello, ())";
-        assertFalse(bracketService.areBracketsCorrect(text));
-    }
-
-    @Test
-    public void emptyBracketsWithSpaceChars() {
-        String text = "(Hello, (   ))";
-        assertFalse(bracketService.areBracketsCorrect(text));
-    }
-
-    @Test
     public void incorrectBrackets() {
         String text = "(Hello, (world)";
         assertFalse(bracketService.areBracketsCorrect(text));
     }
 
     @Test
+    public void correctBracketsEmptyText() {
+        String text = "";
+        assertTrue(bracketService.areBracketsCorrect(text));
+    }
+
+    @Test
     public void correctBrackets() {
         String text = "(Hello, (world))";
+        assertTrue(bracketService.areBracketsCorrect(text));
+    }
+
+    @Test
+    public void correctBracketsLongText() {
+        String text = "Text (before) (Hello, (world)) Text () after";
         assertTrue(bracketService.areBracketsCorrect(text));
     }
 }

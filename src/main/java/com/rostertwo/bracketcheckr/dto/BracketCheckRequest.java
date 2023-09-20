@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class BracketCheckRequest implements DataTransferObject {
+public class BracketCheckRequest {
     @NotNull
     private String text;
 }

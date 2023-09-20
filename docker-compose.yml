@@ -1,6 +1,6 @@
 version: '3'
 services:
   app:
-    image: aydarsh/bracketchecker
+    image: aydarsh/bracketcheckr
     ports:
       - 8080:8080
